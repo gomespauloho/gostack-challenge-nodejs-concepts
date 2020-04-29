@@ -69,7 +69,7 @@ app.put("/repositories/:id", (request, response) => {
 app.delete("/repositories/:id", (request, response) => {
   const { index } = request;
 
-  repositories.splice(index);
+  repositories.splice(index, 1);
 
   return response.status(204).send();
 });
